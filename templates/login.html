@@ -1,0 +1,70 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <link href='{{ url_for('static', filename='img/favicon.ico') }}' rel="icon" type="image/x-icon" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+                <meta content="" name="description">
+                    <meta content="" name="author">
+                            <title>
+                                Admin Login
+                            </title>
+                            <!-- Bootstrap core CSS -->
+                            <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+                                <!-- Custom styles for this template -->
+                                <link href="{{url_for('static', filename='css/signin.css')}}" rel="stylesheet">
+                                </link>
+                            </link>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+        </meta>
+        </meta>
+        </link>
+    </head>
+<body class="text-center">
+      <!-- Navbar content -->
+        <nav class="navbar fixed-top navbar-dark nav justify-content-begin">
+          <a class="navbar-brand" href="/">&larr; Go To Home!</a>
+        </nav>
+
+        <link href="{{url_for('static', filename='css/signin.css')}}" rel="stylesheet">
+            <form action="/dashboard" class="form-signin" method="post">
+                {% set fname = 'img/'+  params['login_image']  %}
+                <img alt="" class="mb-4" height="150" src="{{url_for('static', filename=fname)}}" width="180">
+                    <h1 class="h3 mb-3 font-weight-bold">
+                        Admin Login
+                    </h1>
+                    <label class="sr-only" for="uname">
+                        Username
+                    </label>
+                    <input autofocus="" class="form-control" id="uname" name="uname" placeholder="Username" required="" type="text">
+                        <label class="sr-only" for="pass">
+                            Password
+                        </label>
+                        <input class="form-control" id="pass " name="pass" placeholder="Password" required="" type="password">
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me">
+                                        Remember me
+                                    </input>
+                                </label>
+                             <div class="g-recaptcha" data-sitekey="6LcrfLMZAAAAAIEw3OoK4ogUU4wS_8adScTi-Pqy" data-theme="light" data-size="normal" data-image="image"></div>
+                             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                Sign in
+                            </button>
+                            <p class="mt-5 mb-3 text-warning">
+                                © {{params['blog_name'] }} 2020-2021
+                            </p>
+                        </input>
+                    </input>
+                </img>
+            </form>
+        </link>
+    </body>
+</html>

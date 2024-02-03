@@ -1,0 +1,31 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/digital_ink",
+        "prod_uri": "mysql://root:@localhost/digital_ink",
+
+        "fb_url": "https://www.facebook.com/cestashu",
+        "tw_url": "https://twitter.com/cestashu",
+        "gh_url": "https://github.com/cestashu",
+        "insta_url": "https://www.instagram.com/cestashu",
+
+        "blog_name": "Digital Ink",
+        "main_title_name": "Digital Ink",
+        "tagline": "A Minimal Technical Blogging Site!",
+
+        "gmail_user": "superxplorers@gmail.com",
+        "gmail_password": "qmos lrpf kllz vkmr",
+
+        "about_text" : "Hi, my name is Ashutosh Mishra and i love doing web development. This is a simple blog website based on Flask MicroFramework. KUDOS!",
+        "no_of_posts" : 3,
+
+        "login_image" : "login2.png",
+
+        "admin_user" : "ashu",
+        "admin_password" : "1234",
+
+        "secret_key" : "f0f380bbbc62e2b4b34e78f42d227c8deea3e4803172530f08af286611a3e86e",
+
+        "upload_location" : "C:\\Users\\Ashu\\Desktop\\Flask\\static\\img" 
+    }
+}
