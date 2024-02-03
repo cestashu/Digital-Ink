@@ -1,8 +1,8 @@
 {
     "params": {
-        "local_server": "True",
+        "local_server": "False",
         "local_uri": "mysql://root:@localhost/digital_ink",
-        "prod_uri": "mysql://root:@localhost/digital_ink",
+        "prod_uri": "mssql+pyodbc://digitalInk:Passw0rd@#12@digitalInk.mysql.pythonanywhere-services.com/digitalInk$digital-ink-blog-db",
 
         "fb_url": "https://www.facebook.com/cestashu",
         "tw_url": "https://twitter.com/cestashu",

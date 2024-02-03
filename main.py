@@ -15,22 +15,19 @@ with open("config.json", "r") as c:
 local_server = True  # check this line in config file can be removed or not
 
 app = Flask(__name__)
-app.secret_key = params['secret_key']
-app.config['UPLOAD_FOLDER'] = params['upload_location']
+app.secret_key = os.environ.get('SECRET_KEY', params['secret_key'])
+app.config['UPLOAD_FOLDER'] = '/path/to/your/online/upload/folder'
 app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT='587',
     MAIL_USE_TLS=True,
     MAIL_USE_SSL=False,
-    MAIL_USERNAME=params['gmail_user'],
-    MAIL_PASSWORD=params['gmail_password']
+    app.config['MAIL_USERNAME'] = os.environ.get('GMAIL_USER', params['gmail_user']),
+    app.config['MAIL_PASSWORD'] = os.environ.get('GMAIL_PASSWORD', params['gmail_password'])
 )
 mail = Mail(app)
 
-if(local_server):
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
-else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 
 
 db = SQLAlchemy(app)
@@ -226,4 +223,6 @@ def contact():
     return render_template('contact.html', params=params)
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=False)
+
