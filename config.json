@@ -2,7 +2,7 @@
     "params": {
         "local_server": "False",
         "local_uri": "mysql://root:@localhost/digital_ink",
-        "prod_uri": "mssql+pyodbc://digitalInk:Passw0rd@#12@digitalInk.mysql.pythonanywhere-services.com/digitalInk$digital-ink-blog-db",
+        "prod_uri": "",
 
         "fb_url": "https://www.facebook.com/cestashu",
         "tw_url": "https://twitter.com/cestashu",
@@ -13,8 +13,8 @@
         "main_title_name": "Digital Ink",
         "tagline": "A Minimal Technical Blogging Site!",
 
-        "gmail_user": "superxplorers@gmail.com",
-        "gmail_password": "qmos lrpf kllz vkmr",
+        "gmail_user": "",
+        "gmail_password": "",
 
         "about_text" : "Hi, my name is Ashutosh Mishra and i love doing web development. This is a simple blog website based on Flask MicroFramework. KUDOS!",
         "no_of_posts" : 3,
